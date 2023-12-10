@@ -72,9 +72,7 @@
         }
     }
     .weding_time_line{
-        background: #FFFAF2;
-        padding:30px;
-        margin-bottom: 30px;
+      
         .single_time_line{
             padding-bottom: 48px;
             padding-top: 45px;
@@ -83,7 +81,7 @@
                 position: absolute;
                 height: 40px;
                 width: 1px;
-                background: #C78665;
+                // background: #C78665;
                 left: 50%;
                 // @include transform(translateY(-50%));;
                 content: "";

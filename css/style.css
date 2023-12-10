@@ -1751,7 +1751,7 @@ h3 {
 
 /* line 74, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_story.scss */
 .love_story_area .weding_time_line {
-    background: #fffaf2;
+    /* background: #fffaf2; */
     padding: 30px;
     margin-bottom: 30px;
 }
@@ -1759,7 +1759,7 @@ h3 {
 /* line 78, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_story.scss */
 .love_story_area .weding_time_line .single_time_line {
     padding-bottom: 48px;
-    padding-top: 45px;
+    /* padding-top: 45px; */
     position: relative;
 }
 
