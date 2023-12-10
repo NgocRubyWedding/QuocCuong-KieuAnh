@@ -24,6 +24,344 @@
         <link rel="stylesheet" href="css/slicknav.css" />
         <link rel="stylesheet" href="css/style.css" />
         <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+        <style>
+            .animate-charcter {
+                text-transform: uppercase;
+                background-image: linear-gradient(
+                    -225deg,
+                    #231557 0%,
+                    #44107a 29%,
+                    #ff1361 67%,
+                    #fff800 100%
+                );
+                background-size: auto auto;
+                background-clip: border-box;
+                background-size: 200% auto;
+                color: #fff;
+                background-clip: text;
+                text-fill-color: transparent;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: textclip 2s linear infinite;
+                display: inline-block;
+                font-size: 190px;
+            }
+
+            @keyframes textclip {
+                to {
+                    background-position: 200% center;
+                }
+            }
+            .waviy {
+                position: relative;
+                -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+                font-size: 60px;
+            }
+            .waviy p {
+                font-family: "Alfa Slab One", cursive;
+                position: relative;
+                display: inline-block;
+                text-transform: uppercase;
+                animation: waviy 1s infinite;
+                animation-delay: calc(0.1s * var(--i));
+                color: #8a064e;
+                font-weight: 600;
+            }
+            @keyframes waviy {
+                0%,
+                40%,
+                100% {
+                    transform: translateY(0);
+                }
+                20% {
+                    transform: translateY(-20px);
+                }
+            }
+            .trin-trin {
+                animation-name: trin;
+                animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+            @keyframes trin {
+                from {
+                    transform: rotate3d(0, 0, 1, 0deg);
+                }
+                20%,
+                32%,
+                44%,
+                56%,
+                68% {
+                    transform: rotate3d(0, 0, 1, 0deg);
+                }
+                23%,
+                35%,
+                47%,
+                59%,
+                71% {
+                    transform: rotate3d(0, 0, 1, 15deg);
+                }
+                26%,
+                38%,
+                50%,
+                62%,
+                74% {
+                    transform: rotate3d(0, 0, 1, 0deg);
+                }
+                29%,
+                41%,
+                53%,
+                65%,
+                77% {
+                    transform: rotate3d(0, 0, 1, -15deg);
+                }
+                80% {
+                    transform: rotate3d(0, 0, 1, 0deg);
+                }
+            }
+            #leaves {
+                position: relative;
+                top: -50px;
+                width: 100%;
+                text-align: right;
+                z-index: 1000;
+            }
+
+            #leaves i {
+                display: inline-block;
+                width: 200px;
+                height: 150px;
+                background: linear-gradient(to bottom right, #309900, #005600);
+                transform: skew(20deg);
+                border-radius: 5% 40% 70%;
+                box-shadow: inset 0px 0px 1px #222;
+                border: 1px solid #333;
+                z-index: 1;
+                -webkit-animation: falling 5s 0s infinite;
+            }
+
+            #leaves i:nth-of-type(2n) {
+                -webkit-animation: falling2 5s 0s infinite;
+            }
+            #leaves i:nth-of-type(3n) {
+                -webkit-animation: falling3 5s 0s infinite;
+            }
+
+            #leaves i:before {
+                position: absolute;
+                content: "";
+                top: 117px;
+                right: 9px;
+                height: 27px;
+                width: 32px;
+                transform: rotate(49deg);
+                border-radius: 0% 15% 15% 0%;
+                border-top: 1px solid #222;
+                border-bottom: 1px solid #222;
+                border-left: 0px solid #222;
+                border-right: 1px solid #222;
+                background: linear-gradient(
+                    to right,
+                    rgba(0, 100, 0, 1),
+                    #005600
+                );
+                z-index: 1;
+            }
+
+            #leaves i:after {
+                content: "";
+                height: 125px;
+                width: 10px;
+                background: linear-gradient(
+                    to right,
+                    rgba(0, 0, 0, 0.15),
+                    rgba(0, 0, 0, 0)
+                );
+                display: block;
+                transform: rotate(125deg);
+                position: absolute;
+                left: 85px;
+                border-radius: 50%;
+            }
+
+            #leaves i:nth-of-type(n) {
+                height: 23px;
+                width: 30px;
+            }
+            #leaves i:nth-of-type(n):before {
+                width: 7px;
+                height: 5px;
+                top: 17px;
+                right: 1px;
+            }
+            #leaves i:nth-of-type(n):after {
+                width: 2px;
+                height: 17px;
+                left: 12px;
+                top: 0px;
+            }
+
+            #leaves i:nth-of-type(2n + 1) {
+                height: 11px;
+                width: 16px;
+            }
+            #leaves i:nth-of-type(2n + 1):before {
+                width: 4px;
+                height: 3px;
+                top: 7px;
+                right: 0px;
+            }
+            #leaves i:nth-of-type(2n + 1):after {
+                width: 2px;
+                height: 6px;
+                left: 5px;
+                top: 1px;
+            }
+
+            #leaves i:nth-of-type(3n + 2) {
+                height: 17px;
+                width: 23px;
+            }
+            #leaves i:nth-of-type(3n + 2):before {
+                height: 4px;
+                width: 4px;
+                top: 12px;
+                right: 1px;
+            }
+            #leaves i:nth-of-type(3n + 2):after {
+                height: 10px;
+                width: 2px;
+                top: 1px;
+                left: 8px;
+            }
+
+            #leaves i:nth-of-type(n) {
+                -webkit-animation-delay: 1.9s;
+            }
+            #leaves i:nth-of-type(2n) {
+                -webkit-animation-delay: 3.9s;
+            }
+            #leaves i:nth-of-type(3n) {
+                -webkit-animation-delay: 2.3s;
+            }
+            #leaves i:nth-of-type(4n) {
+                -webkit-animation-delay: 4.4s;
+            }
+            #leaves i:nth-of-type(5n) {
+                -webkit-animation-delay: 5s;
+            }
+            #leaves i:nth-of-type(6n) {
+                -webkit-animation-delay: 3.5s;
+            }
+            #leaves i:nth-of-type(7n) {
+                -webkit-animation-delay: 2.8s;
+            }
+            #leaves i:nth-of-type(8n) {
+                -webkit-animation-delay: 1.5s;
+            }
+            #leaves i:nth-of-type(9n) {
+                -webkit-animation-delay: 3.3s;
+            }
+            #leaves i:nth-of-type(10n) {
+                -webkit-animation-delay: 2.5s;
+            }
+            #leaves i:nth-of-type(11n) {
+                -webkit-animation-delay: 1.2s;
+            }
+            #leaves i:nth-of-type(12n) {
+                -webkit-animation-delay: 4.1s;
+            }
+            #leaves i:nth-of-type(13n) {
+                -webkit-animation-delay: 1s;
+            }
+            #leaves i:nth-of-type(14n) {
+                -webkit-animation-delay: 4.7s;
+            }
+            #leaves i:nth-of-type(15n) {
+                -webkit-animation-delay: 3s;
+            }
+
+            #leaves i:nth-of-type(n) {
+                background: linear-gradient(to bottom right, #309900, #005600);
+            }
+            #leaves i:nth-of-type(2n + 2) {
+                background: linear-gradient(to bottom right, #5e9900, #2b5600);
+            }
+            #leaves i:nth-of-type(4n + 1) {
+                background: linear-gradient(to bottom right, #990, #564500);
+            }
+
+            #leaves i:nth-of-type(n) {
+                opacity: 0.7;
+            }
+            #leaves i:nth-of-type(3n + 1) {
+                opacity: 0.5;
+            }
+            #leaves i:nth-of-type(3n + 2) {
+                opacity: 0.3;
+            }
+
+            #leaves i:nth-of-type(n) {
+                transform: rotate(180deg);
+            }
+
+            #leaves i:nth-of-type(n) {
+                -webkit-animation-timing-function: ease-in-out;
+            }
+
+            @-webkit-keyframes falling {
+                0% {
+                    -webkit-transform: translate3d(300, 0, 0) rotate(0deg);
+                }
+
+                100% {
+                    -webkit-transform: translate3d(-350px, 700px, 0)
+                        rotate(90deg);
+                    opacity: 0;
+                }
+            }
+
+            @-webkit-keyframes falling3 {
+                0% {
+                    -webkit-transform: translate3d(0, 0, 0) rotate(-20deg);
+                }
+
+                100% {
+                    -webkit-transform: translate3d(-230px, 640px, 0)
+                        rotate(-70deg);
+                    opacity: 0;
+                }
+            }
+
+            @-webkit-keyframes falling2 {
+                0% {
+                    -webkit-transform: translate3d(0, 0, 0) rotate(90deg);
+                }
+
+                100% {
+                    -webkit-transform: translate3d(-400px, 680px, 0)
+                        rotate(0deg);
+                    opacity: 0;
+                }
+            }
+            .heart {
+                position: fixed;
+                font-size: 1.5rem;
+                top: -1vh;
+                transform: translateY(0);
+                animation: fall 3s linear forwards;
+                z-index: 1000;
+            }
+
+            @keyframes fall {
+                from {
+                    transform: translateY(0vh) translateX(-10vw);
+                }
+                to {
+                    transform: translateY(105vh) translateX(10vw);
+                }
+            }
+        </style>
     </head>
 
     <body>
@@ -37,13 +375,47 @@
 
         <!-- header-->
         <header>
-            <audio controls>
+            <audio
+                controls
+                id="myAudio"
+                style="position: fixed; visibility: hidden"
+            >
                 <source
                     src="./img/Until-You-Shayne-Ward-Tai-lyrics-nhac-cho-bai-hat-Shayne-Ward.mp3"
                     type="audio/mp3"
                 />
                 Trình duyệt của bạn không hỗ trợ HTML5
             </audio>
+            <img
+                src="./img/radio.png"
+                alt=""
+                style="
+                    width: 80px;
+                    position: fixed;
+                    z-index: 99;
+                    bottom: 20px;
+                    left: 10px;
+                "
+                class="trin-trin"
+                id="playButton"
+            />
+            <div id="leaves" style="height: 1px">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
             <div class="header-area">
                 <div id="sticky-header" class="main-header-area">
                     <div class="container">
@@ -51,7 +423,11 @@
                             <div class="col-xl-3 col-lg-3">
                                 <div class="logo-img">
                                     <a href="index.html">
-                                        <img src="img/logo.png" alt="" />
+                                        <img
+                                            src="./img/Screenshot_5-removebg-preview.png"
+                                            alt=""
+                                            style="height: 50px"
+                                        />
                                     </a>
                                 </div>
                             </div>
@@ -67,67 +443,24 @@
                                                 >
                                             </li>
                                             <li>
-                                                <a href="story.html"
-                                                    >Our Story</a
-                                                >
+                                                <a href="#1">Our Story</a>
                                             </li>
                                             <li>
-                                                <a href="Gallery.html"
-                                                    >Gallery</a
-                                                >
+                                                <a href="#2">Album</a>
                                             </li>
+
                                             <li>
-                                                <a href="#"
-                                                    >blog
-                                                    <i class="ti-angle-down"></i
-                                                ></a>
-                                                <ul class="submenu">
-                                                    <li>
-                                                        <a href="blog.html"
-                                                            >blog</a
-                                                        >
-                                                    </li>
-                                                    <li>
-                                                        <a
-                                                            href="single-blog.html"
-                                                            >single-blog</a
-                                                        >
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#"
-                                                    >pages
-                                                    <i class="ti-angle-down"></i
-                                                ></a>
-                                                <ul class="submenu">
-                                                    <li>
-                                                        <a
-                                                            href="Accommodation.html"
-                                                            >Accommodation</a
-                                                        >
-                                                    </li>
-                                                    <li>
-                                                        <a href="elements.html"
-                                                            >elements</a
-                                                        >
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="contact.html"
-                                                    >Contact</a
-                                                >
+                                                <a href="#3">Programme</a>
                                             </li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <!-- <div class="col-12">
                                 <div
                                     class="mobile_menu d-block d-lg-none"
                                 ></div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -141,9 +474,21 @@
                 <div class="slider_text text-center">
                     <div class="text_inner">
                         <img src="img/banner/ornaments.png" alt="" />
-                        <h4>07 / 01 / 2024</h4>
+                        <!-- <h4>07 / 01 / 2024</h4> -->
+                        <h4 class="waviy">
+                            <p style="--i: 1">0</p>
+                            <p style="--i: 2">7</p>
+                            <p style="--i: 3">/</p>
+                            <p style="--i: 4">0</p>
+                            <p style="--i: 5">1</p>
+                            <p style="--i: 6">/</p>
+                            <p style="--i: 7">2</p>
+                            <p style="--i: 8">0</p>
+                            <p style="--i: 9">2</p>
+                            <p style="--i: 10">4</p>
+                        </h4>
                         <h3>Quốc Cường & Kiều Anh</h3>
-                        <span>Wedding Ceremony</span>
+                        <!-- <span>Wedding Ceremony</span> -->
                     </div>
                 </div>
             </div>
@@ -164,7 +509,9 @@
                         <div class="section_title text-center">
                             <img src="img/banner/flowers.png" alt="" />
                             <span>07 / 01 / 2024</span>
-                            <h3>Đếm Ngược Ngày Cưới</h3>
+                            <h3 class="animate-charcter">
+                                Đếm Ngược Ngày Cưới
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -178,7 +525,7 @@
         <!--/ wedding_countdown -->
 
         <!-- our_love-story -->
-        <div class="love_story_area">
+        <div class="love_story_area" id="1">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -287,13 +634,13 @@
         <!--/ our_love-story -->
 
         <!-- gallery_area  -->
-        <div class="gallery_area">
+        <div class="gallery_area" id="2">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="section_title text-center">
                             <img src="img/banner/flowers.png" alt="" />
-                            <h3>Gallery. Photos</h3>
+                            <h3>Album Ảnh</h3>
                         </div>
                     </div>
                 </div>
@@ -368,7 +715,7 @@
         <!--/ gallery_area  -->
 
         <!-- program_details -->
-        <div class="program_details_area">
+        <div class="program_details_area" id="3">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -385,10 +732,11 @@
                                 <span> 11:05 <br />07/01/2024</span>
                                 <h3>Lễ Cưới</h3>
                                 <p>
-                                    Many variations of passages of Lorem Ipsum
-                                    available, but the majority have suffered
-                                    alteration in some content of a page when
-                                    looking at its layout.
+                                    Chúng tôi hân hạnh mời bạn đến chia vui cùng
+                                    chúng tôi trong ngày đặc biệt này. Xin hãy
+                                    đến và cùng chia sẻ niềm vui, tình yêu, và
+                                    hạnh phúc với gia đình và bạn bè của chúng
+                                    tôi.
                                 </p>
                                 <img
                                     src="img/program_details/ornaments.png"
@@ -406,10 +754,12 @@
                                 >
                                 <h3>Bữa Cơm Thân Mật</h3>
                                 <p>
-                                    Many variations of passages of Lorem Ipsum
-                                    available, but the majority have suffered
-                                    alteration in some content of a page when
-                                    looking at its layout.
+                                    Chúng ta sẽ có cơ hội tận hưởng những khoảnh
+                                    khắc ấm áp bên nhau, tận hưởng không khí
+                                    tràn ngập niềm vui và chia sẻ những bữa ăn
+                                    ngon. Hãy mang theo tình yêu thương và năng
+                                    lượng tích cực để chúng ta có một buổi tối
+                                    đầy ý nghĩa và gắn kết.
                                 </p>
                                 <img
                                     src="img/program_details/ornaments.png"
@@ -424,10 +774,11 @@
                                 <span> 19:30 <br />07/01/2024 </span>
                                 <h3>Quẩy</h3>
                                 <p>
-                                    Many variations of passages of Lorem Ipsum
-                                    available, but the majority have suffered
-                                    alteration in some content of a page when
-                                    looking at its layout.
+                                    Chúng ta sẽ cùng nhau tận hưởng những giai
+                                    điệu vui tươi, nhảy múa, và sự phấn khích
+                                    tại bữa tiệc quẩy này. Đây sẽ là dịp tuyệt
+                                    vời để gặp gỡ bạn bè, tận hưởng âm nhạc, và
+                                    tạo ra những kỷ niệm đáng nhớ.
                                 </p>
                                 <img
                                     src="img/program_details/ornaments.png"
@@ -468,11 +819,24 @@
                                             >
                                                 <h3>Are You Attending?</h3>
                                                 <p>
-                                                    Kindly respond before 30
-                                                    August
+                                                    Cuộc sống trở nên ý nghĩa
+                                                    hơn khi có những người thân
+                                                    yêu xung quanh, và chúng tôi
+                                                    rất hạnh phúc vì đã có sự
+                                                    chia sẻ của các bạn trong
+                                                    khoảnh khắc đặc biệt này.
+                                                    Xin chân thành cảm ơn tất cả
+                                                    mọi người vì sự hiện diện và
+                                                    tình cảm chan thành mà các
+                                                    bạn đã mang đến cho chúng
+                                                    tôi. Chúng tôi sẽ luôn giữ
+                                                    trong trái tim những kí ức
+                                                    đẹp nhất từ ngày cưới này và
+                                                    tiến triển trên con đường
+                                                    hạnh phúc bên nhau.
                                                 </p>
                                             </div>
-                                            <form action="#">
+                                            <!-- <form action="#">
                                                 <div class="row">
                                                     <div class="col-xl-12">
                                                         <input
@@ -522,7 +886,7 @@
                                                         </button>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </form> -->
                                         </div>
                                     </div>
                                 </div>
@@ -535,7 +899,7 @@
         <!-- / attend_area -->
 
         <!-- ================ contact section start ================= -->
-        <section class="location_area">
+        <!-- <section class="location_area">
             <div class="location_info">
                 <div class="location_inner">
                     <div class="location_top text-center">
@@ -2319,11 +2683,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- ================ contact section end ================= -->
 
         <!-- footer_start -->
-        <footer class="footer">
+        <!-- <footer class="footer">
             <div class="footer_top">
                 <div class="container">
                     <div class="row">
@@ -2347,7 +2711,6 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <p class="copy_right text-center">
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;
                                 <script>
                                     document.write(new Date().getFullYear());
@@ -2358,15 +2721,42 @@
                                 <a href="https://colorlib.com" target="_blank"
                                     >Colorlib</a
                                 >
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> -->
         <!-- footer_end -->
+        <script>
+            function createHeart() {
+                const heart = document.createElement("div");
+                heart.classList.add("heart");
 
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+
+                heart.innerText = "💗";
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 5000);
+            }
+
+            setInterval(createHeart, 300);
+            document
+                .getElementById("playButton")
+                .addEventListener("click", function () {
+                    var audio = document.getElementById("myAudio");
+                    if (audio.paused) {
+                        audio.play();
+                    } else {
+                        audio.pause();
+                    }
+                });
+        </script>
         <!-- JS here -->
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="js/vendor/jquery-1.12.4.min.js"></script>

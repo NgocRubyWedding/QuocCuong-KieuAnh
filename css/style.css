@@ -696,7 +696,7 @@ h3 {
 
 /* line 106, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slick-nav.scss */
 .slicknav_icon-bar {
-    background: #000 !important;
+    background: #ed4747 !important;
 }
 
 /* line 1, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_header.scss */
@@ -1078,7 +1078,7 @@ h3 {
         top: 50%;
         transform: translateY(-50%);
         display: inline-block;
-        width: 270px;
+        width: 330px;
         height: 270px;
     }
 }
@@ -1142,7 +1142,7 @@ h3 {
     font-size: 18px;
     font-weight: 700;
     font-family: "Muli", sans-serif;
-    color: black;
+    color: #ff008b;
     margin-top: 5px;
     opacity: 0.8;
 }
@@ -1163,10 +1163,11 @@ h3 {
     .slider_area_inner .slider_text h3 {
         font-size: 20px;
         font-weight: 400;
-        color: #fff;
+        color: #ff8383;
         line-height: 30px;
         margin-bottom: 20px;
         margin-top: 15px;
+        font-weight: 600;
     }
 }
 
@@ -1186,8 +1187,8 @@ h3 {
 .slider_area_inner .slider_text span {
     font-size: 18px;
     font-family: "Petit Formal Script", cursive;
-    font-weight: 400;
-    color: black;
+    font-weight: 500;
+    color: #ff0000;
 }
 
 /* line 144, ../../Arafath/CL/CL september/212. Wedding/HTML/scss/_slider.scss */
